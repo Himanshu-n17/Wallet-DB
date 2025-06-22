@@ -1,0 +1,132 @@
+[2025-06-21T19:35:53.747Z] ERROR: next is not a function
+Stack: TypeError: next is not a function
+    at createWallet (C:\Users\HP\OneDrive\Desktop\Wallet\src\controller\walletController.js:46:5)
+    at register (C:\Users\HP\OneDrive\Desktop\Wallet\src\controller\userController.js:37:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+
+[2025-06-21T19:37:29.267Z] ERROR: next is not defined
+Stack: ReferenceError: next is not defined
+    at createWallet (C:\Users\HP\OneDrive\Desktop\Wallet\src\controller\walletController.js:46:5)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async register (C:\Users\HP\OneDrive\Desktop\Wallet\src\controller\userController.js:37:15)
+
+[2025-06-21T19:40:13.801Z] ERROR: json is not defined
+Stack: ReferenceError: json is not defined
+    at createWallet (C:\Users\HP\OneDrive\Desktop\Wallet\src\controller\walletController.js:44:5)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async register (C:\Users\HP\OneDrive\Desktop\Wallet\src\controller\userController.js:37:15)
+
+[2025-06-21T19:48:42.800Z] ERROR: Cannot destructure property 'amount' of 'req.body' as it is undefined.
+Stack: TypeError: Cannot destructure property 'amount' of 'req.body' as it is undefined.
+    at fundWallet (C:\Users\HP\OneDrive\Desktop\Wallet\src\controller\walletController.js:53:13)
+    at Layer.handleRequest (C:\Users\HP\OneDrive\Desktop\Wallet\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\HP\OneDrive\Desktop\Wallet\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\HP\OneDrive\Desktop\Wallet\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\HP\OneDrive\Desktop\Wallet\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\HP\OneDrive\Desktop\Wallet\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\HP\OneDrive\Desktop\Wallet\node_modules\router\index.js:295:15
+    at processParams (C:\Users\HP\OneDrive\Desktop\Wallet\node_modules\router\index.js:582:12)
+    at next (C:\Users\HP\OneDrive\Desktop\Wallet\node_modules\router\index.js:291:5)
+    at verifyToken (C:\Users\HP\OneDrive\Desktop\Wallet\src\utils\verifyToken.js:22:5)
+
+[2025-06-21T19:49:33.120Z] ERROR: Cannot destructure property 'amount' of 'req.body' as it is undefined.
+Stack: TypeError: Cannot destructure property 'amount' of 'req.body' as it is undefined.
+    at fundWallet (C:\Users\HP\OneDrive\Desktop\Wallet\src\controller\walletController.js:53:13)
+    at Layer.handleRequest (C:\Users\HP\OneDrive\Desktop\Wallet\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\HP\OneDrive\Desktop\Wallet\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\HP\OneDrive\Desktop\Wallet\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\HP\OneDrive\Desktop\Wallet\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\HP\OneDrive\Desktop\Wallet\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\HP\OneDrive\Desktop\Wallet\node_modules\router\index.js:295:15
+    at processParams (C:\Users\HP\OneDrive\Desktop\Wallet\node_modules\router\index.js:582:12)
+    at next (C:\Users\HP\OneDrive\Desktop\Wallet\node_modules\router\index.js:291:5)
+    at verifyToken (C:\Users\HP\OneDrive\Desktop\Wallet\src\utils\verifyToken.js:22:5)
+
+[2025-06-21T19:49:59.138Z] ERROR: Cannot destructure property 'amount' of 'req.body' as it is undefined.
+Stack: TypeError: Cannot destructure property 'amount' of 'req.body' as it is undefined.
+    at fundWallet (C:\Users\HP\OneDrive\Desktop\Wallet\src\controller\walletController.js:54:13)
+    at Layer.handleRequest (C:\Users\HP\OneDrive\Desktop\Wallet\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\HP\OneDrive\Desktop\Wallet\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\HP\OneDrive\Desktop\Wallet\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\HP\OneDrive\Desktop\Wallet\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\HP\OneDrive\Desktop\Wallet\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\HP\OneDrive\Desktop\Wallet\node_modules\router\index.js:295:15
+    at processParams (C:\Users\HP\OneDrive\Desktop\Wallet\node_modules\router\index.js:582:12)
+    at next (C:\Users\HP\OneDrive\Desktop\Wallet\node_modules\router\index.js:291:5)
+    at verifyToken (C:\Users\HP\OneDrive\Desktop\Wallet\src\utils\verifyToken.js:22:5)
+
+[2025-06-21T19:50:22.667Z] ERROR: Cannot destructure property 'amount' of 'req.body' as it is undefined.
+Stack: TypeError: Cannot destructure property 'amount' of 'req.body' as it is undefined.
+    at fundWallet (C:\Users\HP\OneDrive\Desktop\Wallet\src\controller\walletController.js:55:13)
+    at Layer.handleRequest (C:\Users\HP\OneDrive\Desktop\Wallet\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\HP\OneDrive\Desktop\Wallet\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\HP\OneDrive\Desktop\Wallet\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\HP\OneDrive\Desktop\Wallet\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\HP\OneDrive\Desktop\Wallet\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\HP\OneDrive\Desktop\Wallet\node_modules\router\index.js:295:15
+    at processParams (C:\Users\HP\OneDrive\Desktop\Wallet\node_modules\router\index.js:582:12)
+    at next (C:\Users\HP\OneDrive\Desktop\Wallet\node_modules\router\index.js:291:5)
+    at verifyToken (C:\Users\HP\OneDrive\Desktop\Wallet\src\utils\verifyToken.js:22:5)
+
+[2025-06-21T19:51:54.241Z] ERROR: Cannot destructure property 'amount' of 'req.body' as it is undefined.
+Stack: TypeError: Cannot destructure property 'amount' of 'req.body' as it is undefined.
+    at fundWallet (C:\Users\HP\OneDrive\Desktop\Wallet\src\controller\walletController.js:56:13)
+    at Layer.handleRequest (C:\Users\HP\OneDrive\Desktop\Wallet\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\HP\OneDrive\Desktop\Wallet\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\HP\OneDrive\Desktop\Wallet\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\HP\OneDrive\Desktop\Wallet\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\HP\OneDrive\Desktop\Wallet\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\HP\OneDrive\Desktop\Wallet\node_modules\router\index.js:295:15
+    at processParams (C:\Users\HP\OneDrive\Desktop\Wallet\node_modules\router\index.js:582:12)
+    at next (C:\Users\HP\OneDrive\Desktop\Wallet\node_modules\router\index.js:291:5)
+    at verifyToken (C:\Users\HP\OneDrive\Desktop\Wallet\src\utils\verifyToken.js:22:5)
+
+[2025-06-21T20:47:39.425Z] ERROR: Column 'created_at' in field list is ambiguous
+Stack: Error: Column 'created_at' in field list is ambiguous
+    at PromisePool.query (C:\Users\HP\OneDrive\Desktop\Wallet\node_modules\mysql2\lib\promise\pool.js:36:22)
+    at getStatement (C:\Users\HP\OneDrive\Desktop\Wallet\src\controller\walletController.js:220:31)
+    at Layer.handleRequest (C:\Users\HP\OneDrive\Desktop\Wallet\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\HP\OneDrive\Desktop\Wallet\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\HP\OneDrive\Desktop\Wallet\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\HP\OneDrive\Desktop\Wallet\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\HP\OneDrive\Desktop\Wallet\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\HP\OneDrive\Desktop\Wallet\node_modules\router\index.js:295:15
+    at processParams (C:\Users\HP\OneDrive\Desktop\Wallet\node_modules\router\index.js:582:12)
+    at next (C:\Users\HP\OneDrive\Desktop\Wallet\node_modules\router\index.js:291:5)
+
+[2025-06-21T21:03:01.096Z] ERROR: pool is not defined
+Stack: ReferenceError: pool is not defined
+    at buyProduct (C:\Users\HP\OneDrive\Desktop\Wallet\src\controller\productController.js:40:16)
+    at Layer.handleRequest (C:\Users\HP\OneDrive\Desktop\Wallet\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\HP\OneDrive\Desktop\Wallet\node_modules\router\lib\route.js:157:13)
+    at verifyToken (C:\Users\HP\OneDrive\Desktop\Wallet\src\utils\verifyToken.js:22:5)
+    at Layer.handleRequest (C:\Users\HP\OneDrive\Desktop\Wallet\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\HP\OneDrive\Desktop\Wallet\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\HP\OneDrive\Desktop\Wallet\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\HP\OneDrive\Desktop\Wallet\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\HP\OneDrive\Desktop\Wallet\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\HP\OneDrive\Desktop\Wallet\node_modules\router\index.js:295:15
+
+[2025-06-21T21:04:09.749Z] ERROR: Column 'receiver_id' cannot be null
+Stack: Error: Column 'receiver_id' cannot be null
+    at PromisePoolConnection.query (C:\Users\HP\OneDrive\Desktop\Wallet\node_modules\mysql2\lib\promise\connection.js:29:22)
+    at buyProduct (C:\Users\HP\OneDrive\Desktop\Wallet\src\controller\productController.js:79:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+
+[2025-06-22T04:35:53.571Z] ERROR: refreshToken is not defined
+Stack: ReferenceError: refreshToken is not defined
+    at register (C:\Users\HP\OneDrive\Desktop\Wallet\src\controller\userController.js:37:53)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+
+[2025-06-22T04:44:56.599Z] ERROR: Column 'sender_id' cannot be null
+Stack: Error: Column 'sender_id' cannot be null
+    at PromisePool.query (C:\Users\HP\OneDrive\Desktop\Wallet\node_modules\mysql2\lib\promise\pool.js:36:22)
+    at fundWallet (C:\Users\HP\OneDrive\Desktop\Wallet\src\controller\walletController.js:112:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+
+[2025-06-22T05:04:27.620Z] ERROR: Column 'sender_id' cannot be null
+Stack: Error: Column 'sender_id' cannot be null
+    at PromisePool.query (C:\Users\HP\OneDrive\Desktop\Wallet\node_modules\mysql2\lib\promise\pool.js:36:22)
+    at fundWallet (C:\Users\HP\OneDrive\Desktop\Wallet\src\controller\walletController.js:112:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+
