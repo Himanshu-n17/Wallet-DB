@@ -1,4 +1,3 @@
-// src/controller/walletController.js
 const pool = require("../../db");
 const {
   validateUsername,
@@ -58,7 +57,6 @@ const createWallet = async (user) => {
   try {
     const userId = user;
 
-    // Check if wallet already exists
     const [existing] = await pool.query(
       "SELECT id FROM wallets WHERE user_id = ?",
       [userId]
@@ -68,7 +66,6 @@ const createWallet = async (user) => {
       return res.status(409).json({ error: "Wallet already exists" });
     }
 
-    // Create new wallet with default balance
     const [result] = await pool.query(
       "INSERT INTO wallets (user_id, balance) VALUES (?, ?)",
       [userId, 0.0]
@@ -102,13 +99,11 @@ const fundWallet = async (req, res, next) => {
 
     const newBalance = parseFloat(walletRows[0].balance) + parseFloat(amount);
 
-    // Update balance
     await pool.query("UPDATE wallets SET balance = ? WHERE user_id = ?", [
       newBalance,
       userId,
     ]);
 
-    // Insert credit transaction with receiver_balance_after
     await pool.query(
       "INSERT INTO transactions (sender_id, receiver_id, amount, type, receiver_balance_after) VALUES (?, ?, ?, ?, ?)",
       [userId, userId, amount, "credit", newBalance]
@@ -143,7 +138,6 @@ const transferMoney = async (req, res, next) => {
   try {
     await conn.beginTransaction();
 
-    // Get sender wallet
     const [senderWalletRows] = await conn.query(
       "SELECT id, balance FROM wallets WHERE user_id = ?",
       [senderId]
@@ -156,7 +150,6 @@ const transferMoney = async (req, res, next) => {
       return res.status(400).json({ error: "Insufficient balance" });
     }
 
-    // Get receiver user ID
     const [receiverUserRows] = await conn.query(
       "SELECT id FROM users WHERE username = ?",
       [toUsername]
@@ -166,7 +159,6 @@ const transferMoney = async (req, res, next) => {
     }
     const receiverId = receiverUserRows[0].id;
 
-    // Get receiver wallet
     const [receiverWalletRows] = await conn.query(
       "SELECT id, balance FROM wallets WHERE user_id = ?",
       [receiverId]
@@ -179,7 +171,6 @@ const transferMoney = async (req, res, next) => {
     const newReceiverBalance =
       parseFloat(receiverWalletRows[0].balance) + amount;
 
-    // Update both balances
     await conn.query("UPDATE wallets SET balance = ? WHERE user_id = ?", [
       newSenderBalance,
       senderId,
@@ -189,13 +180,11 @@ const transferMoney = async (req, res, next) => {
       receiverId,
     ]);
 
-    // Insert 'debit' transaction for sender
     await conn.query(
       'INSERT INTO transactions (sender_id, receiver_id, amount, type, sender_balance_after) VALUES (?, ?, ?, ?, ?)',
       [senderId, receiverId, amount, 'debit', newSenderBalance]
     );
 
-    // Insert 'credit' transaction for receiver
     await conn.query(
       'INSERT INTO transactions (sender_id, receiver_id, amount, type, receiver_balance_after) VALUES (?, ?, ?, ?, ?)',
       [senderId, receiverId, amount, 'credit', newReceiverBalance]

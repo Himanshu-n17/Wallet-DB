@@ -3,7 +3,6 @@ const path = require("path");
 
 const logFile = path.join(__dirname, "logs", "errors.log");
 
-// Ensure log directory exists
 fs.mkdirSync(path.dirname(logFile), { recursive: true });
 
 const errorLogger = (err, req, res, next) => {

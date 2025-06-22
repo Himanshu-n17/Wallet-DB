@@ -5,7 +5,6 @@ const addProduct = async (req, res, next) => {
   try {
     const { name, price, description } = req.body;
 
-    // Basic validation
     if (!name || typeof name !== "string" || name.length < 3) {
       return res.status(400).json({ error: "Invalid product name" });
     }
@@ -42,7 +41,6 @@ const buyProduct = async (req, res, next) => {
   try {
     await conn.beginTransaction();
 
-    // Check product exists
     const [productRows] = await conn.query(
       "SELECT price FROM products WHERE id = ?",
       [product_id]
@@ -53,7 +51,6 @@ const buyProduct = async (req, res, next) => {
 
     const price = parseFloat(productRows[0].price);
 
-    // Check wallet
     const [walletRows] = await conn.query(
       "SELECT balance FROM wallets WHERE user_id = ?",
       [userId]
@@ -69,19 +66,16 @@ const buyProduct = async (req, res, next) => {
 
     const newBalance = balance - price;
 
-    // Update wallet
     await conn.query("UPDATE wallets SET balance = ? WHERE user_id = ?", [
       newBalance,
       userId,
     ]);
 
-    // Log debit transaction
     await conn.query(
       "INSERT INTO transactions (sender_id, receiver_id, amount, type) VALUES (?, ?, ?, ?)",
       [userId, null, price, "debit"]
     );
 
-    // Optionally log purchase
     await conn.query(
       "INSERT INTO purchases (user_id, product_id) VALUES (?, ?)",
       [userId, product_id]

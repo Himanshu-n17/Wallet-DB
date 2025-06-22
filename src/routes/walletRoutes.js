@@ -8,7 +8,7 @@ const {
 } = require("../controller/walletController");
 const verifyToken = require("../utils/verifyToken");
 
-router.use(verifyToken); // 🔐 all routes below require token
+router.use(verifyToken);
 
 router.get("/balance", getWalletBalance);
 router.post("/fund", fundWallet);

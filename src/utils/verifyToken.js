@@ -8,7 +8,7 @@ const verifyToken = (req, res, next) => {
     return res.status(401).json({ error: "Authorization header missing" });
   }
 
-  const token = authHeader.split(" ")[1]; // Expected format: "Bearer <token>"
+  const token = authHeader.split(" ")[1]; 
 
   if (!token) {
     return res.status(401).json({ error: "Token missing from header" });
@@ -18,7 +18,7 @@ const verifyToken = (req, res, next) => {
     console.log(token);
 
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
-    req.user = decoded; // you can access user ID or role from this
+    req.user = decoded; 
     next();
   } catch (err) {
     return res.status(403).json({ error: "Invalid or expired token" });
